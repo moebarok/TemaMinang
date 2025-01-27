@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tema Minang</title>
+    <!-- cover -->
+    <link rel="icon" type="text/css" href="Asset/img/rumahadat1.png">
+    <!-- boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Work+Sans&display=swap" rel="stylesheet">
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- lightbox2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/css/lightbox.min.css" integrity="sha512-xtV3HfYNbQXS/1R1jP53KbFcU9WXiSA1RFKzl5hRlJgdOJm4OxHCWYpskm6lN0xp0XtKGpAfVShpbvlFH3MDAA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- css -->
+    <link rel="stylesheet" href="Asset/css/style.css">
+  </head>
+  <body class="overflow-hidden">
+    <!-- music -->
+    <audio src="Asset/audio/minangsound.mp3" loop class="music"></audio>
+    <!-- soundeffect -->
+    <audio src="Asset/audio/doorsound.mp3" class="sound-door"></audio>
+
+    <!-- doorsection -->
+    <div id="door-section" class="open" onclick="mulai()">
+      <div class="doors">
+        <div class="door left">
+          <img src="Asset/img/doorL.jpg" alt="left door">
+        </div>
+        <div class="door right">
+          <img src="Asset/img/doorR.jpg" alt="right door">
+        </div>
+      </div>
+    </div>
+
+
+        <!-- contentsection -->
+    <div id="content-section">
+      <!-- navbar -->
+      <div class="nav-bg">
+        </div>
+      <ul class="nav">
+        <span class="nav-music"></span>
+        <li>
+          <a href="#acara-section">
+            <i class="fas fa-fw fa-calendar-day"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#lokasi-section">
+            <i class="fas fa-fw fa-location-dot"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#love-story-section">
+            <i class="fas fa-fw fa-heart"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-item-music rotate" id="music-button" onclick="toggleMusic(event)">
+            <i class="fas fa-fw fa-compact-disc"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#gallery-section">
+            <i class="fas fa-fw fa-image"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#gift-section">
+            <i class="fas fa-fw fa-gift"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#rsvp-section">
+            <i class="fas fa-fw fa-check-to-slot"></i>
+          </a>
+        </li>
+      </ul>
+
+
+
+      <!-- hero section -->
+      <section id="hero-section" class="d-flex align-items-center">
+        <div class="container text-center">
+          <h4 class="my-2 text-white">Dear</h4>
+          <h4 class="my-2 text-white"><span id="nama-sambutan"></span></h4>
+          <h1 class="my-2 text-white huruf-sambung">Tejo & Surti</h1>
+          <h4 class="my-2 text-white">Akan segera melangsungkan pernikahan pada</h4>
+          <h4 class="my-2 text-white fw-bold">Sabtu, 1 Februari 2025</h4>
+          <div class="row my-3 d-flex justify-content-center" id="countdown-wedding">
+            <div class="col-lg-1 col-3"><div class="text-center p-2 rounded text-light"><h5>0</h5>Hari</div></div><div class="col-lg-1 col-3"><div class="text-center p-2 rounded text-light"><h5>0</h5>Jam</div></div><div class="col-lg-1 col-3"><div class="text-center p-2 rounded text-light"><h5>0</h5>Menit</div></div><div class="col-lg-1 col-3"><div class="text-center p-2 rounded text-light"><h5>0</h5>Detik</div></div>
+          </div>
+          <a href="#pembuka-section" class="rounded-pill btn btn-lg btn-get-started py-3"><i class="fas fa-fw fa-envelope-open-text"></i> Buka Undangan</a>
+        </div>
+      </section>
+
+
+      <!-- pembuka section -->
+      <section id="pembuka-section" class="pembuka-section section-bg py-5">
+        <div class="container" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="section-title text-center">
+                <h1 class="text-putih huruf-sambung fw-bold">Assalamualaikum</h1>
+                <h3> بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ  </h3>
+                <p>Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.</p>
+                <p>(QS. Ar-Rum 21)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="pembuka-section" class="pembuka-section section-bg1 py-5">
+        <div class="container" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="section-pengantin text-center">
+                <p>Maha suci Allah yang telah menciptakan mahluk-Nya berpasang-pasangan. Ya Allah rahmatilah pernikahan kami</p>
+              </div>
+
+              <!-- pria -->
+              <div class="row my-4 justify-content-center">
+                <div class="col-lg-8 text-center" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                  <img src="Asset/img/pria1.png" alt="mempelai-pria" class="img-fluid rounded-pill">
+                </div>
+                <div class="row my-3 justify-content-between">
+                  <div class="col rounded" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                    <div class="pengantin p-2 pt-3 text-center">
+                      <h1 class="text-center huruf-sambung">Tejo</h1>
+                      <p>Putra pertama dari pasangan:</p>
+                      <p>Ari & Ara</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- & -->
+              <div class="row my-2 justify-content-center">
+                <div class="row my-3 justify-content-between">
+                  <div class="pengantin p-2 pt-3 text-center" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                    <h1 class="text-center huruf-sambung">&</h1>
+                  </div>
+                </div>
+              </div>
+
+              <!-- wanita -->
+              <div class="row my-4 justify-content-center">
+                <div class="col-lg-8 text-center" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                  <img src="Asset/img/wanita1.png" alt="mempelai-wanita" class="img-fluid rounded-pill">
+                </div>
+                <div class="row my-3 justify-content-between">
+                  <div class="col rounded" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                    <div class="pengantin p-2 pt-3 text-center">
+                      <h1 class="text-center huruf-sambung">Surti</h1>
+                      <p>Putri pertama dari pasangan:</p>
+                      <p>Ali & Ela</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Acara Section -->
+      <section id="acara-section" class="acara-section section-bg py-5">
+        <div class="container" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="section-title">
+                <h1 class="text-putih huruf-sambung fw-bold">Acara Pernikahan</h1>
+                <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila, Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan do'a restunya, kami ucapkan terima kasih.</p>
+              </div>
+              <div class="row justify-content-between px-3 text-center">
+                <div class="acara col-lg-6 border my-2 rounded p-3 card-acara" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
+                  <h4>Akan Nikah</h4>
+                  <hr>
+                  <p><i class="fas fa-fw fa-calendar-day"></i>Sabtu, 1 Februari 2025</p>
+                  <p><i class="fas fa-fw fa-clock"></i>10:00 WIB - 12:00 WIB</p>
+                  <p><i class="fas fa-fw fa-location-dot"></i>Planet Mars</p>
+                  <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Akan+Nikah&details=Akad+nikah+Tejo+dan+Surti&location=Planet+Mars&dates=20250201T030000Z%2F20250201T050000Z" class="btn btn-lg btn-red rounded-pill" target="_blank">
+                    <i class="fas fa-fw fa-calendar-day"></i>Simpan ke Kalender
+                  </a>
+                </div>
+
+                <div class="acara col-lg-6 border my-2 rounded p-3 card-acara" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
+                  <h4>Resepsi Nikah</h4>
+                  <hr>
+                  <p><i class="fas fa-fw fa-calendar-day"></i>Sabtu, 1 Februari 2025</p>
+                  <p><i class="fas fa-fw fa-clock"></i>12:00 WIB - 17:00 WIB</p>
+                  <p><i class="fas fa-fw fa-location-dot"></i>Planet Mars</p>
+                  <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Resepsi+Nikah&details=Resepsi+nikah+Tejo+dan+Surti&location=Planet+Mars&dates=20250201T050000Z%2F20250201T100000Z" class="btn btn-lg btn-red rounded-pill" target="_blank">
+                    <i class="fas fa-fw fa-calendar-day"></i>Simpan ke Kalender
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- lokasi section -->
+      <section id="lokasi-section" class="lokasi-section py-5 section-bg1">
+        <div class="container" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="section-title">
+                <h1 class="text-pink huruf-sambung fw-bold">Lokasi Akad & Resepsi Pernikahan</h1>
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-lg-12 text-center">
+                  <a href="https://maps.app.goo.gl/L69t5YAZUhrDBmPm7" target="_blank" class="btn btn-lg btn-pink rounded-pill mb-4"><i class="fas fa-fw fa-location-dot"></i>Buka di Google Maps</a>
+                  <iframe class="mb-4 mb-lg-0 border-pink" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d244.8089225724327!2d101.04249702668979!3d0.4921362258390695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5192dfc06b6e9%3A0x7565a2c2de5eb9f2!2sMallibu%20Swalayan!5e1!3m2!1sen!2sid!4v1737638352052!5m2!1sen!2sid" width="100%" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- love story section -->
+      <section id="love-story-section" class="love-story-section section-bg py-5">
+        <div class="container" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+          <div class="section-title">
+            <h1 class="text-putih huruf-sambung fw-bold">Love Story</h1>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-lg">
+              <ul class="timeline">
+                <li data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
+                  <div class="timeline-badge" style="background-image:url('Asset/img/timeline/t1.jpg');"></div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <h3 class="timeline-title">Pertemuan Pertama Tejo dan Surti</h3>
+                      <span class="timeline-date">20 Oktober 2000</span>
+                    </div>
+                    <div class="timeline-body">
+                      <p>Di pematang sawah di kota kecil mereka, Tejo yang pemalu dan Surti yang ramah pertama kali bertemu. Meskipun awalnya mereka tidak terlalu akrab, ada kilatan kecocokan yang tak terduga di antara mereka.</p>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="timeline-inverted" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
+                  <div class="timeline-badge" style="background-image:url('Asset/img/timeline/t2.jpg');"></div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <h3 class="timeline-title">Pertemanan Tumbuh</h3>
+                      <span class="timeline-date">2000-2015</span>
+                    </div>
+                    <div class="timeline-body">
+                      <p>Seiring berjalannya waktu, Tejo dan Surti menjadi teman yang tidak dapat dipisahkan. Mereka sering bermain bersama dan saling membantu satu sama lain dalam kesulitan. Selama masa-masa sekolah dasar dan menengah, persahabatan mereka semakin berkembang.</p>
+                    </div>
+                  </div>
+                </li>
+
+                <li data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
+                  <div class="timeline-badge" style="background-image:url('Asset/img/timeline/t3.jpg');"></div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <h3 class="timeline-title">Lamaran dan Menikah</h3>
+                      <span class="timeline-date">2020-2025</span>
+                    </div>
+                    <div class="timeline-body">
+                      <p>Tejo, dengan hati penuh keberanian, melamar Surti di tempat favorit mereka, pematang sawah di mana mereka pertama kali bertemu. Dengan sukses, Surti menerima lamaran tersebut dengan penuh kebahagiaan dan mereka menikah.</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- gallery section -->
+      <section id="gallery-section" class="gallery-section py-5 section-bg1">
+        <div class="container" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+          <div class="section-title">
+            <h1 class="huruf-sambung text-pink fw-bold">Gallery</h1>
+          </div>
+          <div class="row" data-masonry='{"percentPosition": true}'>
+            <div class="col-sm-6 col-lg-4 mb-4">
+              <a href="Asset/img/gallery/gal1.jpg" data-lightbox="tejoSurti" class="text-decoration-none">
+                <img src="Asset/img/gallery/gal1.jpg" alt="g1" class="card-img border-pink">
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+              <a href="Asset/img/gallery/gal2.jpg" data-lightbox="tejoSurti" class="text-decoration-none">
+                <img src="Asset/img/gallery/gal2.jpg" alt="g1" class="card-img border-pink">
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+              <a href="Asset/img/gallery/gal3.jpg" data-lightbox="tejoSurti" class="text-decoration-none">
+                <img src="Asset/img/gallery/gal3.jpg" alt="g1" class="card-img border-pink">
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+              <a href="Asset/img/gallery/gal4.jpg" data-lightbox="tejoSurti" class="text-decoration-none">
+                <img src="Asset/img/gallery/gal4.jpg" alt="g1" class="card-img border-pink">
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+              <a href="Asset/img/gallery/gal5.jpg" data-lightbox="tejoSurti" class="text-decoration-none">
+                <img src="Asset/img/gallery/gal5.jpg" alt="g1" class="card-img border-pink">
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+              <a href="Asset/img/gallery/gal6.jpg" data-lightbox="tejoSurti" class="text-decoration-none">
+                <img src="Asset/img/gallery/gal6.jpg" alt="g1" class="card-img border-pink">
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+              <a href="Asset/img/gallery/gal7.jpg" data-lightbox="tejoSurti" class="text-decoration-none">
+                <img src="Asset/img/gallery/gal7.jpg" alt="g1" class="card-img border-pink">
+              </a>
+            </div>
+          </div>
+          <!-- video -->
+          <!-- <div class="row justify-content-center">
+            <div class="col-12 text-center">
+              <iframe class="border-pink" width="100%" height="500" src="https://www.youtube.com/embed/N_ji5jpT3aU?si=38fLBTYO8DW3o6ne" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div> -->
+          
+          </div>
+        </div>
+      </section>
+
+
+      <!-- gift section -->
+      <section id="gift-section" class="gift-section py-5 section-bg">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="section-title">
+                <h1 class="huruf-sambung text-putih fw-bold">Wedding Gift</h1>
+                <p>Bagi Bapak/Ibu/Saudara/i yang ingin mengirimkan hadiah pernikahan dapat melalui virtual account atau e-wallet di bawah ini</p>
+              </div>
+
+              <div class="row justify-content-center">
+                <div class="col-lg-6 text-center">
+                  <button type="button" class="text-center btn btn-lg btn-red mb-4 rounded-pill" data-bs-toggle="collapse" data-bs-target="#collapseHadiah"><i class="fas fa-fw fa-gift"></i>Kirim Hadiah</button>
+                  <div class="collapse" id="collapseHadiah">
+                    <div class="my-4 mx-auto position-relative credit-card">
+                      <img src="Asset/img/card/logomandiri.png" alt="Logo Mandiri" class="card-logo">
+                      <div class="card-container">
+                        <img src="Asset/img/card/sim.png" alt="sim" class="card-sim">
+                        <div class="card-number">111 111 111 111</div>
+                      </div>
+                      <div class="card-name mt-2">Tejo</div>
+                      <a style="cursor: pointer;" onclick="copyText(this)" class="copy-button btn btn-light mt-3">
+                        <i class="fas fa-fw fa-copy"></i>
+                        Copy
+                      </a>
+                    </div>
+
+                    <div class="my-4 mx-auto position-relative credit-card">
+                      <img src="Asset/img/card/logodana.png" alt="Logo Dana" class="card-logo">
+                      <div class="card-container">
+                        <img src="Asset/img/card/sim.png" alt="sim" class="card-sim">
+                        <div class="card-number">0852 0101 7676</div>
+                      </div>
+                      <div class="card-name mt-2">Tejo</div>
+                      <a style="cursor: pointer;" onclick="copyText(this)" class="copy-button btn btn-light mt-3">
+                        <i class="fas fa-fw fa-copy"></i>
+                        Copy
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+
+      <!-- RSVP section -->
+      <section id="rsvp-section" class="rsvp-section section-bg1 py-5">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="section-title text-center">
+                <h1 class="text-pink huruf-sambung fw-bold">RSVP</h1>
+                <p>Isi form di bawah ini untuk melakukan konfirmasi kehadiran Anda.</p>
+              </div>
+              <form action="https://script.google.com/macros/s/AKfycbwLEcEcrkXGwxDIU3zafadQTT2r-yVWHRw-1-AH-wah0tsazmqYt8rMOzdokk-E0PVr/exec" method="POST" id="rsvp-form" class="row row-cols-md-auto g-3 align-items-center justify-content-center">
+                <div class="col-12">
+                  <div class="mb-3">
+                    <label for="nama">Nama</label>
+                    <input type="text" id="nama" name="nama" class="form-control" required>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="mb-3">
+                    <label for="jumlah">Jumlah</label>
+                    <input type="number" id="jumlah" name="jumlah" class="form-control" required min="1" max="5" Length="1" value="1">
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="mb-3">
+                    <label for="status">Status</label>
+                    <select name="status" id="status" class="form-select" required>
+                      <option value="0">--- Pilih salah satu ---</option>
+                      <option value="Hadir">Hadir</option>
+                      <option value="Tidak Hadir">Tidak Hadir</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-12 mt-3">
+                  <div class="mt-3">
+                    <button type="submit" class="btn btn-kirim"><i class="fas fa-fw fa-paper-plane"></i>Kirim</button>
+                  </div>
+                </div>
+              </form>
+              <div class="row mt-5">
+                <div class="col-lg-12">
+                  <div id="disqus_thread"></div>
+                  <script>
+                      /**
+                      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                      /*
+                      var disqus_config = function () {
+                      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                      };
+                      */
+                      (function() { // DON'T EDIT BELOW THIS LINE
+                      var d = document, s = d.createElement('script');
+                      s.src = 'https://wedding-tejo-dan-surti.disqus.com/embed.js';
+                      s.setAttribute('data-timestamp', +new Date());
+                      (d.head || d.body).appendChild(s);
+                      })();
+                  </script>
+                  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- penutup section -->
+      <section id="penutup-section" class="penutup-section py-5">
+        <div class="container" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="section-title text-center">
+                <h1 class="text-putih huruf-sambung fw-bold">Wassalamualaikum</h1>
+                <p>Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila Bapak/Ibu/Saudara/i, berkenan hadir dan memberikan do'a restu kepada kami.</p>
+                <h5 class="my-3">KAMI YANG BERBAHAGIA</h5>
+                <h1 class="huruf-sambung">Tejo & Surti</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- footer -->
+      <footer id="footer" class="mb-5 pb-5">
+        <div class="container py-5 text-center position-relative">
+          <div class="row">
+            <div class="col-12 my-3">
+              <a class="text-decoration-none text-pink fw-bold">&copy; 2025. Made with ❤️ by Fatih Mubarok</a>
+            </div>
+            <div class="col-12 my-3">
+              <a href="#" class="text-pink"><i class="fas fa-fw fa-arrow-up"></i>back to top</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+
+
+    
+
+
+    <!-- jquery3 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- boostrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- lighbox2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/js/lightbox.min.js" integrity="sha512-KbRFbjA5bwNan6DvPl1ODUolvTTZ/vckssnFhka5cG80JVa5zSlRPCr055xSgU/q6oMIGhZWLhcbgIC0fyw3RQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- swetaler2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.15.10/dist/sweetalert2.all.min.js"></script>
+    <!-- masonry -->
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+    <!-- myjs -->
+    <script src="Asset/js/script.js"></script>
+    <script id="dsq-count-scr" src="//wedding-tejo-dan-surti.disqus.com/count.js" async></script>
+  </body>
+</html>
